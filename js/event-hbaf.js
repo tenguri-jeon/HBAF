@@ -59,7 +59,6 @@ function makeSlide(pcSlideCount, tabletSlideCount,mobileSlideCount) {
          if( index > slidewrapper[0].childElementCount - count-1){
             index=slidewrapper[0].childElementCount - count -1
          }
-         console.log(slidewrapper[0].childElementCount)
          index++;
          contentsSize();
      }
