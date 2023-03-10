@@ -105,7 +105,7 @@ function backgroundcontrol() {
     function choicebackleft() {
 
         let observer = new IntersectionObserver ((e)=>{
-            e.forEach((background)=>{
+            e.forEach   ((background)=>{
             if(background.isIntersecting){
                 background.target.classList.remove('choice-back-r');
             } else{
