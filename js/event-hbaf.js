@@ -13,22 +13,6 @@ function makeSlide(pcSlideCount, tabletSlideCount,mobileSlideCount) {
      let containerWidth;
      let index = 0;
         
-
-     leftButton[0].addEventListener('click', (e) => {
-         e.preventDefault();
-         leftslide();
-     })
-
-     rightButton[0].addEventListener('click', (e)=> {
-         e.preventDefault();
-         rifgtslide();
-     })
-
-     window.addEventListener('resize' , ()=>{
-         checkWidth();
-         contentsSize;
-     })
-
      checkWidth();
      function checkWidth() {
          if(window.innerWidth > 1200){
@@ -45,14 +29,26 @@ function makeSlide(pcSlideCount, tabletSlideCount,mobileSlideCount) {
          }
      }
 
-     window.addEventListener('resize', () => {
-         checkWidth();
+     leftButton[0].addEventListener('click', (e) => {
+         e.preventDefault();
+         leftslide();
      })
+
+     rightButton[0].addEventListener('click', (e)=> {
+         e.preventDefault();
+         rifgtslide();
+     })
+
+     window.addEventListener('resize' , ()=>{
+         checkWidth();
+         contentsSize;
+     })
+
 
 
      function leftslide() {
          if(index < 0) {
-index=0
+            index=0
          }
          index--;
          contentsSize();
@@ -63,7 +59,6 @@ index=0
          if( index > slidewrapper[0].childElementCount - count-1){
             index=slidewrapper[0].childElementCount - count -1
          }
-         console.log(slidewrapper[0].childElementCount)
          index++;
          contentsSize();
      }

@@ -116,7 +116,7 @@ function backgroundcontrol() {
     const div = document.querySelectorAll('.choice-left .choice-chracter-area');
     observer.observe(div[0]);
     observer.observe(div[1]);
-}
+    }
 
 function carrotPlay(){
     let observer = new IntersectionObserver ((e)=>{
